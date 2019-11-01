@@ -4,11 +4,11 @@ class Student extends Model {
   static init(sequelize) {
     super.init(
       {
-        nome: Sequelize.STRING,
+        name: Sequelize.STRING,
         email: Sequelize.STRING,
-        idade: Sequelize.STRING,
-        peso: Sequelize.STRING,
-        altura: Sequelize.STRING,
+        age: Sequelize.STRING,
+        weight: Sequelize.STRING,
+        height: Sequelize.STRING,
       },
       {
         sequelize,
