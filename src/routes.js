@@ -5,6 +5,6 @@ import StudentController from './app/controllers/StudentsController';
 const routes = new Router();
 
 routes.post('/students', StudentController.store);
-routes.get('/students', StudentController.get);
+routes.put('/students/:id', StudentController.update);
 
 export default routes;
