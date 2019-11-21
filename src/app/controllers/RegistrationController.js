@@ -1,6 +1,8 @@
 import * as Yup from 'yup';
 import { addMonths, parseISO, format, isBefore } from 'date-fns';
 
+// import Mail from '../../lib/Mail';
+
 import Registration from '../models/Registration';
 import Student from '../models/Student';
 import Plan from '../models/Plan';
@@ -83,6 +85,16 @@ class RegistrationController {
       end_date,
       price,
     });
+
+    //   await Mail.sendMail({
+    //     to: `${studentExists.name} <${studentExists.email}>`,
+    //     subject: 'Matrícula realizada',
+    //     template: 'registration',
+    //     context: {
+    //       student: studentExists.name,
+    //       plan: registration.price,
+    //     },
+    //   });
 
     return res.json(registration);
   }
