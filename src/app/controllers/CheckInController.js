@@ -37,6 +37,10 @@ class CheckInController {
       }
     }
 
+    /**
+     * Precisa implementar verificação diária
+     */
+
     const checkin = await Checkin.create({ student_id });
 
     return res.json(checkin);
